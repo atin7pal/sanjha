@@ -71,11 +71,11 @@ function App() {
           </div>
         </section>
 
-        <section className="mx-20 my-12 h-[60vh] py-12 w-auto rounded-3xl max-sm:h-full max-sm:py-3 relative">
+        <section className="mx-20 my-12 h-[60vh] py-12 w-auto rounded-3xl max-sm:h-full max-sm:py-3 relative max-sm:mx-6">
           <img src={droplet} alt="" className="absolute h-[200px] top-0 left-0" />
           <div className="w-full h-full flex justify-center items-center max-sm:flex-col">
             {Services.map((element) => (
-              <div className="w-full py-4 px-20 flex flex-col gap-4 items-center justify-center">
+              <div className="w-full py-4 px-20 flex flex-col gap-4 items-center justify-center max-sm:px-6">
                 <div
                   className="h-[50px] w-[50px] bg-contain bg-center bg-no-repeat"
                   style={{ backgroundImage: `url(${element.icon})` }}
