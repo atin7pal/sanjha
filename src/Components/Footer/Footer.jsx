@@ -29,7 +29,7 @@ export function Footer() {
         <div className="flex justify-around items-center gap-4 w-full max-sm:flex-col max-sm:justify-center">
           <div className="w-[70%] max-sm:w-full">
             <div
-              className="h-[170px] w-[170px] bg-cover bg-no-repeat bg-center bg-[#009d8f]/20"
+              className="h-[170px] w-[170px] bg-cover bg-no-repeat bg-center bg-[#fffdd7]/20  rounded-full"
               style={{ backgroundImage: `url(${logo})` }}
             ></div>
             <p className="w-[80%] py-6">
