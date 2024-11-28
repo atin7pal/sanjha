@@ -65,8 +65,14 @@ export function Menutabs() {
       </TabsHeader>
       <TabsBody>
         {data.map(({ value, desc }) => (
-          <TabPanel key={value} value={value} className="flex justify-center items-center">
-            <div className="grid grid-cols-3 max-sm:grid-cols-1 mt-6 gap-8 ">{desc}</div>
+          <TabPanel
+            key={value}
+            value={value}
+            className="flex justify-center items-center"
+          >
+            <div className="grid grid-cols-3 max-sm:grid-cols-1 mt-6 gap-8 max-md:grid-cols-2">
+              {desc}
+            </div>
           </TabPanel>
         ))}
       </TabsBody>

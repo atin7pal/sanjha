@@ -19,7 +19,7 @@ import {
   ChevronUpIcon,
 } from "@heroicons/react/24/outline";
 
-import logo from '../../assets/Images/home/logo.png'
+import logo from "../../assets/Images/home/logo.png";
 
 const nestedMenuItems = [
   {
@@ -35,7 +35,6 @@ const nestedMenuItems = [
     title: "Ecommerce",
   },
 ];
-
 
 function NavListMenu() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
@@ -87,14 +86,16 @@ function NavListMenu() {
             handler={setopenNestedMenu}
           >
             <MenuHandler className="flex items-center justify-between px-2 py-3">
-              <MenuItem className=" hover:bg-gray-200"><p className="font-semibold w-full text-center">Figma</p></MenuItem>
+              <MenuItem className=" hover:bg-gray-200">
+                <p className="font-semibold w-full text-center">Figma</p>
+              </MenuItem>
             </MenuHandler>
           </Menu>
           <MenuItem className="flex items-center justify-between px-2 py-3">
-          <p className="font-semibold w-full text-center">Figma</p>
+            <p className="font-semibold w-full text-center">Figma</p>
           </MenuItem>
           <MenuItem className="flex items-center justify-between px-2 py-3">
-          <p className="font-semibold w-full text-center">Figma</p>
+            <p className="font-semibold w-full text-center">Figma</p>
           </MenuItem>
         </MenuList>
       </Menu>
@@ -207,12 +208,17 @@ export function NavigationBar() {
   return (
     <Navbar className="mx-auto px-4 py-1 w-full rounded-none shadow-none border-none">
       <div className="flex items-center justify-between text-blue-gray-900">
-        <div className="h-[80px] w-[80px] bg-contain bg-no-repeat bg-center" style={{backgroundImage: `url(${logo})`}}></div>
+        <div
+          className="h-[120px] w-[120px] bg-contain bg-no-repeat bg-center"
+          style={{ backgroundImage: `url(${logo})` }}
+        ></div>
         <div className="hidden lg:block">
           <NavList />
         </div>
         <div className="hidden gap-3 lg:flex">
-          <Button className="bg-[#009688] py-3 rounded-full">Book a table</Button>
+          <Button className="bg-[#009688] py-3 rounded-full">
+            Book a table
+          </Button>
         </div>
         <IconButton
           variant="text"
@@ -229,9 +235,7 @@ export function NavigationBar() {
       <Collapse open={openNav}>
         <NavList />
         <div className="flex w-full flex-nowrap items-center gap-2 lg:hidden">
-          <button className="w-full py-2 px-4 bg-[#009688]" >
-            Get Started
-          </button>
+          <button className="w-full py-2 px-4 bg-[#009688]">Get Started</button>
         </div>
       </Collapse>
     </Navbar>
