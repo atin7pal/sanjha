@@ -37,7 +37,7 @@ function App() {
     <>
       <div className=" bg-contain bg-no-repeat bg-center">
         <NavigationBar />
-        <section className="bg-[#e6e8dd] mx-10 my-6 h-[110vh] w-auto rounded-[40px] max-sm:mx-5 max-sm:my-3 max-sm:h-[70vh]">
+        <section className="bg-[#e6e8dd] mx-10 my-10 h-[110vh] w-auto rounded-[40px] max-sm:mx-5 max-sm:my-3 max-sm:h-[70vh]">
           <div
             className="flex justify-center items-center flex-row h-full bg-contain bg-no-repeat bg-center rounded-[40px] max-sm:flex-col"
             style={{ backgroundImage: `url(${hero})` }}
