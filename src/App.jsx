@@ -4,36 +4,16 @@ import Services from "./assets/Arrays/Homefeaturearray";
 import Carousel from "./Modules/Carousel/Carousel";
 import hero from "./assets/Images/home/hero.webp";
 import chef from "./assets/Images/home/chef.webp";
-import background from "./assets/Images/home/background.png";
-import generalbg from "./assets/Images/home/backgroundgeneral.webp";
 import { Menutabs } from "./Modules/Tabs/Tabs";
 import customer from "./assets/Images/home/customer.webp";
 import banner from "./assets/Images/home/banner.webp";
 import droplet from "./assets/Images/home/droplet.png";
 import { Footer } from "./Components/Footer/Footer";
-import { Gallery } from "./Components/Gallerygrid/Gallery";
+import { MenuData } from "./assets/Arrays/Menudata";
+import { GalleryData } from "./assets/Arrays/Gallery/Gallerydata";
 
 function App() {
-  const [count, setCount] = useState(0);
-
-  const slides = [
-    {
-      image: "https://via.placeholder.com/800x400?text=Slide+1",
-      alt: "Slide 1",
-      caption: "Welcome to Slide 1",
-    },
-    {
-      image: "https://via.placeholder.com/800x400?text=Slide+2",
-      alt: "Slide 2",
-      caption: "Enjoy Slide 2",
-    },
-    {
-      image: "https://via.placeholder.com/800x400?text=Slide+3",
-      alt: "Slide 3",
-      caption: "Slide 3 is awesome!",
-    },
-  ];
-
+ 
   return (
     <>
       <div className=" bg-contain bg-no-repeat bg-center">
@@ -97,45 +77,46 @@ function App() {
         <h2 className="text-4xl font-bold w-full text-gray-800 max-sm:text-center text-center py-10">
           A glimpse to our gallery
         </h2>
-        <Gallery />
+        <Menutabs data={GalleryData} activestate={`restaurant`} />
         <div className="w-full h-full flex justi ytems-center px-14 py-10 bg-center bg-no-repeat max-sm:px-6">
-        <div className="w-full h-full flex justiyy1center items-center max-sm:flex-col max-sm:gap-4">
-          <div
-            className="w-full h-[70vh] brightness-105 bg-contain bg-no-repeat max-sm:h-[40vh]"
-            style={{ backgroundImage: `url(${chef})` }}
-          ></div>
-          <div className="w-full h-full  flex flex-col justify-center items-start gap-4 px-10 max-sm:px-3 max-sm:items-center">
-            <h2 className="text-4xl font-bold w-full text-gray-800 max-sm:text-center">
-              Healthy food to live a healthier life for the future
-            </h2>
-            <p className="max-sm:text-center">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste
-              dolor voluptatem recusandae optio, earum totam cupiditate
-              laboriosam aut maxime, eum magni veniam ipsa eius pariatur debitis
-              dolores animi quaerat dignissimos?
-            </p>
-            <button className="rounded-full px-8 py-3 bg-[#009688] text-white border-2 border-[#009688] text-sm hover:text-[#009688] hover:bg-transparent hover:border-2 hover:border-[#548776] transition-all">
-              Reserve a table
-            </button>
-          </div>
+          <div className="w-full h-full flex justiyy1center items-center max-sm:flex-col max-sm:gap-4">
+            <div
+              className="w-full h-[70vh] brightness-105 bg-contain bg-no-repeat max-sm:h-[40vh]"
+              style={{ backgroundImage: `url(${chef})` }}
+            ></div>
+            <div className="w-full h-full  flex flex-col justify-center items-start gap-4 px-10 max-sm:px-3 max-sm:items-center">
+              <h2 className="text-4xl font-bold w-full text-gray-800 max-sm:text-center">
+                Healthy food to live a healthier life for the future
+              </h2>
+              <p className="max-sm:text-center">
+                Sanjha Ghar Punjab, a celebrated restaurant in Punjab, offers an
+                authentic culinary experience with a diverse menu featuring
+                traditional Punjabi dishes. Known for its warm ambiance and rich
+                flavours, it's a go-to destination for those seeking the true
+                taste of Punjabi cuisine in a welcoming setting.
+              </p>
+              <button className="rounded-full px-8 py-3 bg-[#009688] text-white border-2 border-[#009688] text-sm hover:text-[#009688] hover:bg-transparent hover:border-2 hover:border-[#548776] transition-all">
+                Reserve a table
+              </button>
+            </div>
           </div>
         </div>
       </section>
-
       <section className="w-full h-full flex bg-[#ebf7f3] justify-center flex-col items-center px-20 py-16 bg-center bg-no-repeat max-sm:py-8 max-sm:px-2">
         <div className="w-full flex justify-start item-center flex-col gap-6 max-sm:justify-center">
           <h2 className="text-4xl font-bold w-full text-gray-800 max-sm:text-center">
             Our Popular Menu
           </h2>
           <p className="w-1/2 text-gray-600 max-sm:w-full max-sm:text-center">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic unde
-            ratione dolores magni modi aut earum facere fugit, animi atque id
-            quisquam neque nam provident quibusdam doloremque harum sapiente
-            esse?
+            Sanjha Ghar Punjab, a celebrated restaurant in Punjab, offers an
+            authentic culinary experience with a diverse menu featuring
+            traditional Punjabi dishes. Known for its warm ambiance and rich
+            flavours, it's a go-to destination for those seeking the true taste
+            of Punjabi cuisine in a welcoming setting.
           </p>
         </div>
         <div className="w-full">
-          <Menutabs />
+          <Menutabs data={MenuData} activestate={`breakfast`} />
         </div>
         <button className="rounded-full mt-7 w-[200px] px-8 py-3 bg-[#009688] text-white border-2 border-[#009688] text-sm hover:text-[#009688] hover:bg-transparent hover:border-2 hover:border-[#548776] transition-all">
           Explore all menus

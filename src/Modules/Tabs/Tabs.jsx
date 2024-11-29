@@ -6,47 +6,21 @@ import {
   Tab,
   TabPanel,
 } from "@material-tailwind/react";
-import { Product } from "../../Components/Product/Product";
-import { breakfastItems } from "../../assets/Arrays/Breakfastarray";
-import { LunchItems } from "../../assets/Arrays/LunchItems";
-import { DessertItems } from "../../assets/Arrays/Desertsarray";
 
-export function Menutabs() {
-  const [activeTab, setActiveTab] = useState("breakfast"); // State to manage active tab
-
-  const data = [
-    {
-      label: "Breakfast",
-      value: "breakfast",
-      desc: <Product items={breakfastItems} />,
-    },
-    {
-      label: "Lunch",
-      value: "lunch",
-      desc: <Product items={LunchItems} />,
-    },
-    {
-      label: "Desserts",
-      value: "desserts",
-      desc: <Product items={DessertItems} />,
-    },
-    {
-      label: "Beverage",
-      value: "beverage",
-      desc: <Product items={DessertItems} />, // Replace this with your actual Beverage items
-    },
-  ];
+export function Menutabs({ data, activestate }) {
+  const [activeTab, setActiveTab] = useState(`${activestate}`); // State to manage active tab
 
   return (
     <Tabs
       value={activeTab}
       onChange={(value) => setActiveTab(value)} // Handle active tab change
-      className="w-full"
+      className="w-full z-0"
     >
       <TabsHeader
         className="bg-transparent w-1/2 mt-6"
         indicatorProps={{
-          className: "bg-[#009688] shadow-none text-white rounded-full",
+          className:
+            "bg-[#009688] text-white shadow-none text-white rounded-md font-semibold",
         }}
       >
         {data.map(({ label, value }) => (
