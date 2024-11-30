@@ -17,7 +17,7 @@ export function Menutabs({ data, activestate }) {
       className="w-full z-0"
     >
       <TabsHeader
-        className="bg-transparent w-1/2 mt-6"
+        className="bg-transparent w-1/2 mt-6 z-0"
         indicatorProps={{
           className:
             "bg-[#009688] text-white shadow-none text-white rounded-md font-semibold",
@@ -42,7 +42,7 @@ export function Menutabs({ data, activestate }) {
           <TabPanel
             key={value}
             value={value}
-            className="flex justify-center items-center"
+            className="flex justify-center items-center z-0"
           >
             <div className="grid grid-cols-3 max-sm:grid-cols-1 mt-6 gap-8 max-md:grid-cols-2">
               {desc}

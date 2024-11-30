@@ -77,7 +77,7 @@ function NavListMenu() {
             </ListItem>
           </Typography>
         </MenuHandler>
-        <MenuList className="hidden rounded-lg lg:block min-w-40">
+        <MenuList className="hidden rounded-lg lg:block min-w-40 z-50">
           <Menu
             placement="right-start"
             allowHover
@@ -85,7 +85,7 @@ function NavListMenu() {
             open={openNestedMenu}
             handler={setopenNestedMenu}
           >
-            <MenuHandler className="flex items-center justify-between px-2 py-3">
+            <MenuHandler className="flex items-center justify-between px-2 py-3 z-50">
               <MenuItem className=" hover:bg-gray-200">
                 <p className="font-semibold w-full text-center">Figma</p>
               </MenuItem>
@@ -136,7 +136,7 @@ function NavList() {
     <List className="mb-6 mt-4 p-0 lg:mb-0 lg:mt-0 lg:flex-row lg:p-1">
       <Typography
         as="a"
-        href="#"
+        href="."
         variant="small"
         color="blue-gray"
         className="font-medium"
@@ -170,7 +170,7 @@ function NavList() {
       <NavListMenu />
       <Typography
         as="a"
-        href="#"
+        href="/about"
         variant="small"
         color="blue-gray"
         className="font-medium"
@@ -206,10 +206,10 @@ export function NavigationBar() {
   }, []);
 
   return (
-    <Navbar className="mx-auto px-4 py-1 w-full rounded-none shadow-none border-none">
+    <Navbar className="mx-auto px-4 py-1 w-full rounded-none shadow-none border-none fixed top-0" style={{zIndex: 1050}}>
       <div className="flex items-center justify-between text-blue-gray-900">
         <div
-          className="h-[120px] w-[120px] bg-contain bg-no-repeat bg-center"
+          className="h-[100px] w-[100px] bg-contain bg-no-repeat bg-center"
           style={{ backgroundImage: `url(${logo})` }}
         ></div>
         <div className="hidden lg:block">

@@ -24,12 +24,14 @@ export function GalleryComponent({ url, alt, label }) {
       {/* Modal */}
       {isModalOpen && (
         <div
-          className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-75 backdrop-blur-sm z-60"
+        style={{zIndex: 1050}}
+          className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-75 backdrop-blur-sm"
           onClick={handleCloseModal}
         >
           <div
+          style={{zIndex: 1050}}
             className="relative bg-white rounded-lg overflow-hidden shadow-lg max-w-3xl w-full"
-            onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside modal content
+            onClick={(e) => e.stopPropagation()}
           >
             <img
               src={url}
@@ -37,7 +39,7 @@ export function GalleryComponent({ url, alt, label }) {
               className="w-full h-[600px] object-cover"
             />
             <button
-              className="absolute top-2 right-2 bg-red-500 text-white rounded-full px-4 py-2"
+              className="absolute top-2 right-2 bg-black/80 text-white rounded-full px-4 py-2"
               onClick={handleCloseModal}
             >
               <CgClose />
