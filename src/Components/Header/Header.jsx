@@ -182,7 +182,7 @@ function NavList() {
 
       <Typography
         as="a"
-        href="#"
+        href="/contact"
         variant="small"
         color="blue-gray"
         className="font-medium"
@@ -195,7 +195,7 @@ function NavList() {
   );
 }
 
-export function NavigationBar() {
+export function NavigationBar({backgroundcolor = "bg-white"}) {
   const [openNav, setOpenNav] = React.useState(false);
 
   React.useEffect(() => {
@@ -206,7 +206,7 @@ export function NavigationBar() {
   }, []);
 
   return (
-    <Navbar className="mx-auto px-4 py-1 w-full rounded-none shadow-none border-none fixed top-0" style={{zIndex: 1050}}>
+    <Navbar className={`mx-auto px-4 py-1 w-full rounded-none shadow-none border-none fixed top-0 ${backgroundcolor}`} style={{zIndex: 1050}}>
       <div className="flex items-center justify-between text-blue-gray-900">
         <div
           className="h-[100px] w-[100px] bg-contain bg-no-repeat bg-center"

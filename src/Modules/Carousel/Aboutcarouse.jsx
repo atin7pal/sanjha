@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-
-function Aboutcarousel({imgslides, height}) {
+function Aboutcarousel({ imgslides, height }) {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   // Automatically move to the next slide every 3 seconds
@@ -35,4 +34,4 @@ function Aboutcarousel({imgslides, height}) {
   );
 }
 
-export default Aboutcarousel
+export default Aboutcarousel;

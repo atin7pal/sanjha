@@ -85,7 +85,7 @@ export function About({}) {
         style={{
           backgroundImage: `linear-gradient(#000000cb, #000000cb),url(${ceosectionimg})`,
         }}
-        className="py-10 h-[70vh] max-sm:h-[100%] bg-[#ebf7f3] px-20 max-sm:px-5 flex justify-center items-center flex-col gap-4 w-full relative bg-cover bg-center bg-no-repeat"
+        className="py-10 h-[80vh] max-sm:h-[100%] bg-[#ebf7f3] px-20 max-sm:px-5 flex justify-center items-center flex-col gap-4 w-full relative bg-cover bg-center bg-no-repeat"
       >
         <div className="flex w-[80%] max-sm:flex-col max-sm:w-full">
           <div className="w-[70%] h-full max-sm:w-full flex justify-center items-center">

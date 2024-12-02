@@ -36,7 +36,7 @@ function App() {
               </h1>
               <p
                 type="text"
-                className="bg-white  w-[60%] rounded-full px-8 py-3 border-2 border-[#548776] max-sm:w-full"
+                className="bg-white  w-[60%] rounded-full px-8 py-3 border-2 font-semibold border-[#548776] max-sm:w-full"
               >
                 Eat | Meditate | Stay and more
               </p>
