@@ -11,21 +11,21 @@ export const StatsData = () => {
       title: "Years in Service",
       description: "Serving you since decades",
       icon: MdOutlineAccessTime,
-      number: 10,
+      number: 3,
       classname: "",
     },
     {
       title: "Visitors Daily",
       description: "People visit us and stay happy",
       icon: TiTicket,
-      number: 15,
+      number: 125,
       classname: "",
     },
     {
       title: "Team Members",
       description: "Dedicated and passionate members",
       icon: FaPeopleGroup,
-      number: 25,
+      number: 35,
       classname: "",
     },
     {
@@ -38,7 +38,7 @@ export const StatsData = () => {
   ];
 
   return (
-    <div className="grid grid-cols-2 gap-6">
+    <div className="grid grid-cols-2 gap-6 max-[850px]:gap-3">
       {data.map((item, index) => (
         <Counter
           className={item.classname}

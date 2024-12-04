@@ -30,7 +30,7 @@ export const Counter = ({
           return () => clearInterval(interval); // Cleanup on unmount
         }
       },
-      { threshold: 0.5 }
+      { threshold: 1 }
     );
 
     const element = document.getElementById(`stat-${title}`);
@@ -42,17 +42,19 @@ export const Counter = ({
   return (
     <div
       id={`stat-${title}`}
-      className={`flex flex-col items-center gap-2 p-6 ${classname}`}
+      className={`flex flex-col items-center gap-2 p-6 ${classname} max-[850px]:p-2 max-[850px]:gap-1`}
     >
       <div
-        className="w-20 h-20 flex justify-center items-center text-gray-900 text-4xl bg-center bg-contain bg-no-repeat"
+        className="w-20 h-20 flex justify-center items-center text-gray-900 text-4xl bg-center bg-contain bg-no-repeat max-[850px]:w-10 max-[850px]:text-2xl"
         style={{ backgroundImage: `url(${iconbg})` }}
       >
         <Icon /> {/* Render the icon */}
       </div>
-      <h3 className="text-xl font-bold text-gray-900">{title}</h3>
+      <h3 className="text-xl font-bold text-gray-900 max-[850px]:text-lg">
+        {title}
+      </h3>
       <p className="text-gray-500 text-center max-sm:h-[50px]">{description}</p>
-      <p className="text-4xl font-bold text-[#009688]">{count}</p>
+      <p className="text-4xl font-bold text-[#009688]">{count}+</p>
     </div>
   );
 };

@@ -15,7 +15,7 @@ export function GalleryComponent({ url, alt, label }) {
   return (
     <>
       <img
-        className="h-[400px] w-full max-w-full rounded-lg object-cover object-center cursor-pointer"
+        className="h-[400px] w-full max-w-full rounded-lg object-cover object-center cursor-pointer max-[850px]:h-[250px]"
         src={url}
         alt={alt}
         onClick={handleImageClick}

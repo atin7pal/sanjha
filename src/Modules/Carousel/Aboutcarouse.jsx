@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-function Aboutcarousel({ imgslides, height }) {
+function Aboutcarousel({ imgslides, height, mobileheight = `50vh` }) {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   // Automatically move to the next slide every 3 seconds
@@ -15,7 +15,9 @@ function Aboutcarousel({ imgslides, height }) {
   }, []);
 
   return (
-    <div className={`relative w-full  overflow-hidden h-[${height}]`}>
+    <div
+      className={`relative w-full  overflow-hidden rounded-3xl h-[${height}] max-sm:h-[${mobileheight}]`}
+    >
       <div
         className="flex transition-transform duration-700"
         style={{
@@ -25,7 +27,7 @@ function Aboutcarousel({ imgslides, height }) {
         {imgslides.map((slide) => (
           <div
             key={slide.id}
-            className={`min-w-full h-[${height}] flex-shrink-0 bg-center bg-cover rounded-3xl`}
+            className={`min-w-full h-[${height}] flex-shrink-0 bg-center bg-cover rounded-3xl max-sm:h-[${mobileheight}]`}
             style={{ backgroundImage: `url(${slide.src})` }}
           ></div>
         ))}

@@ -56,7 +56,7 @@ function NavListMenu() {
       >
         <MenuHandler>
           <Typography as="div" variant="small" className="font-medium">
-            <ListItem
+            {/* <ListItem
               className="flex items-center gap-2 py-2 pr-4 font-medium text-gray-900"
               selected={isMenuOpen || isMobileMenuOpen}
               onClick={() => setIsMobileMenuOpen((cur) => !cur)}
@@ -74,7 +74,7 @@ function NavListMenu() {
                   isMobileMenuOpen ? "rotate-180" : ""
                 }`}
               />
-            </ListItem>
+            </ListItem> */}
           </Typography>
         </MenuHandler>
         <MenuList className="hidden rounded-lg lg:block min-w-40 z-50">
@@ -147,7 +147,7 @@ function NavList() {
       </Typography>
       <Typography
         as="a"
-        href="#"
+        href="/restaurant"
         variant="small"
         color="blue-gray"
         className="font-medium"
@@ -195,7 +195,7 @@ function NavList() {
   );
 }
 
-export function NavigationBar({backgroundcolor = "bg-white"}) {
+export function NavigationBar({ backgroundcolor = "bg-white" }) {
   const [openNav, setOpenNav] = React.useState(false);
 
   React.useEffect(() => {
@@ -206,7 +206,10 @@ export function NavigationBar({backgroundcolor = "bg-white"}) {
   }, []);
 
   return (
-    <Navbar className={`mx-auto px-4 py-1 w-full rounded-none shadow-none border-none fixed top-0 ${backgroundcolor}`} style={{zIndex: 1050}}>
+    <Navbar
+      className={`mx-auto px-4 py-1 w-full rounded-none shadow-none border-none fixed top-0 ${backgroundcolor}`}
+      style={{ zIndex: 1050 }}
+    >
       <div className="flex items-center justify-between text-blue-gray-900">
         <div
           className="h-[100px] w-[100px] bg-contain bg-no-repeat bg-center"

@@ -13,11 +13,14 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="mx-auto px-12 py-12 bg-[#fff] shadow-md rounded-3xl w-[90%]">
+    <div className="mx-auto px-12 py-12 bg-[#fff] shadow-md rounded-3xl w-[90%] max-[850px]:w-full max-[850px]:p-8 max-sm:p-4">
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
         {/* Name */}
         <div>
-          <label htmlFor="name" className="block text-gray-400 mb-2 mx-1 font-semibold text-xs">
+          <label
+            htmlFor="name"
+            className="block text-gray-400 mb-2 mx-1 font-semibold text-xs"
+          >
             Name:
           </label>
           <input
@@ -37,7 +40,10 @@ const ContactForm = () => {
         <div className="w-full flex gap-3 max-sm:flex-col">
           {/* Email */}
           <div className="w-full">
-            <label htmlFor="email" className="block text-gray-400 font-semibold text-xs mb-2 mx-1">
+            <label
+              htmlFor="email"
+              className="block text-gray-400 font-semibold text-xs mb-2 mx-1"
+            >
               Email:
             </label>
             <input
@@ -64,7 +70,10 @@ const ContactForm = () => {
 
           {/* Phone */}
           <div className="w-full">
-            <label htmlFor="phone" className="block text-gray-400 mb-2 mx-1 font-semibold text-xs">
+            <label
+              htmlFor="phone"
+              className="block text-gray-400 mb-2 mx-1 font-semibold text-xs"
+            >
               Phone:
             </label>
             <input
@@ -91,7 +100,10 @@ const ContactForm = () => {
         </div>
         {/* City */}
         <div>
-          <label htmlFor="city" className="block text-gray-400 mb-2 mx-1 font-semibold text-xs">
+          <label
+            htmlFor="city"
+            className="block text-gray-400 mb-2 mx-1 font-semibold text-xs"
+          >
             City:
           </label>
           <input
@@ -110,7 +122,10 @@ const ContactForm = () => {
 
         {/* Query */}
         <div>
-          <label htmlFor="query" className="block text-gray-400 mb-2 mx-1 font-semibold text-xs">
+          <label
+            htmlFor="query"
+            className="block text-gray-400 mb-2 mx-1 font-semibold text-xs"
+          >
             Query
           </label>
           <textarea
@@ -126,8 +141,6 @@ const ContactForm = () => {
             <p className="text-red-500 text-sm mt-1">{errors.query.message}</p>
           )}
         </div>
-
-        {/* Submit Button */}
         <button className="rounded-xl w-[200px] px-8 py-2 border-[#009688] border bg-transparent text-[#009688] text-sm hover:bg-[#009688] hover:text-white transition-all">
           Send
         </button>

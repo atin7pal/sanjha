@@ -44,7 +44,7 @@ export function Menutabs({ data, activestate }) {
             value={value}
             className="flex justify-center items-center z-0"
           >
-            <div className="grid grid-cols-3 max-sm:grid-cols-1 mt-6 gap-8 max-md:grid-cols-2">
+            <div className="grid grid-cols-3 max-sm:grid-cols-1 mt-6 gap-8 max-md:grid-cols-2 max-[850px]:grid-col-2 max-[850px]:gap-4">
               {desc}
             </div>
           </TabPanel>

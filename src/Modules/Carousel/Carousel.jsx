@@ -40,7 +40,7 @@ const Carousel = ({ slides }) => {
   };
 
   return (
-    <div className="relative w-[600px] h-[80vh] mx-auto overflow-hidden flex flex-col justify-center items-start max-sm:w-full max-sm:h-full">
+    <div className="relative w-[600px] h-[80vh] mx-auto overflow-hidden flex flex-col justify-center items-start max-sm:w-full max-sm:h-full max-[850px]:h-full max-[850px]:w-full">
       <h2 className="text-5xl font-bold py-5 themetext max-sm:text-3xl">
         Our Customers love our lovely food
       </h2>
