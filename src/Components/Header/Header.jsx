@@ -158,6 +158,17 @@ function NavList() {
       </Typography>
       <Typography
         as="a"
+        href="/menu"
+        variant="small"
+        color="blue-gray"
+        className="font-medium"
+      >
+        <ListItem className="flex items-center gap-2 py-2 pr-6 text-gray-700">
+          Menu
+        </ListItem>
+      </Typography>
+      <Typography
+        as="a"
         href="#"
         variant="small"
         color="blue-gray"
@@ -167,6 +178,7 @@ function NavList() {
           Meditation
         </ListItem>
       </Typography>
+     
       <NavListMenu />
       <Typography
         as="a"
@@ -219,7 +231,7 @@ export function NavigationBar({ backgroundcolor = "bg-white" }) {
           <NavList />
         </div>
         <div className="hidden gap-3 lg:flex">
-          <Button className="bg-[#009688] py-3 rounded-full">
+          <Button className="bg-[#009688] py-3 rounded-lg">
             Book a table
           </Button>
         </div>

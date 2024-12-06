@@ -4,19 +4,19 @@ import { Footer } from "../../Components/Footer/Footer";
 import restauranthero from "../../assets/Images/Restaurant/restaurant.webp";
 import droplet from "../../assets/Images/home/droplet.png";
 import { Menucarduse } from "../../Components/Card/Menucarduse";
-import { Avatar } from "@material-tailwind/react";
 import { AvatarStack } from "../../Components/Avatar/Avatarstack";
 import { Helmet } from "react-helmet-async";
 import freshfood from "../../assets/Images/Restaurant/freshfood.webp";
-import chef from "../../assets/Images/Restaurant/expertchef.webp";
-import { BsMenuApp } from "react-icons/bs";
 import { Trendingcard } from "../../Components/Card/Trending/Trendingcard";
 import { Bannercomponent } from "../../Components/Banner/Bannercomponent";
-import banner from '../../assets/Images/About/ceosectionbg.jpg'
+import banner from "../../assets/Images/About/ceosectionbg.jpg";
 import { Menutabs } from "../../Modules/Tabs/Tabs";
+import imageside from "../../assets/Images/home/imageside.webp";
 import { MenuData } from "../../assets/Arrays/Menudata";
+import Aboutcarousel from "../../Modules/Carousel/Aboutcarouse";
+import { Restaurantimgs } from "../../assets/Arrays/Restaurantimages";
 
-export function Restaurant(props) {
+export function Restaurant({ props }) {
   return (
     <>
       <Helmet>
@@ -64,6 +64,20 @@ export function Restaurant(props) {
         <h2 className="text-5xl themetext font-bold py-10">Check our menu</h2>
         <div className="flex w-full gap-4 py-10 pb-10 max-sm:grid max-sm:grid-cols-2">
           <Menucarduse />
+        </div>
+      </section>
+      <section className="bg-white w-full max-sm:p-6 flex flex-col justify-center items-center">
+        <div className="flex w-full justify-center items-center">
+          <div className="w-[70%]">
+            <img src={imageside} alt="" />
+          </div>
+          <div className="w-full flex justify-center items-center h-full px-5">
+            <Aboutcarousel
+              height={`60vh`}
+              mobileheight="40vh"
+              imgslides={Restaurantimgs}
+            />
+          </div>
         </div>
       </section>
       <section className="w-full h-full flex flex-col justify-center items-center relative py-6 px-6">
@@ -118,9 +132,12 @@ export function Restaurant(props) {
         </div>
       </section>
       <section className="px-10 py-20 bg-[#ebf7f3] w-full max-sm:p-6">
-        <h1 className="text-4xl font-bold themetext text-start w-full mb-6">Our Menu</h1>
-      <Menutabs data={MenuData} activestate={`breakfast`} />
+        <h1 className="text-4xl font-bold themetext text-start w-full mb-6">
+          Our Menu
+        </h1>
+        <Menutabs data={MenuData} activestate={`breakfast`} />
       </section>
+
       <section className="px-10 py-20 bg-[#fff] flex flex-col justify-center items-center gap-4 max-sm:p-8">
         <h1 className="text-4xl font-bold w-full text-center text-gray-700 pb-10">
           Trending recepies
@@ -130,7 +147,7 @@ export function Restaurant(props) {
         </div>
       </section>
       <section className="px-10 pb-20 bg-[#fff] flex flex-col justify-center items-center gap-4 max-sm:p-8">
-        <Bannercomponent banner={banner}/>
+        <Bannercomponent banner={banner} />
       </section>
       <Footer />
     </>

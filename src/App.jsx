@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { NavigationBar } from "./Components/Header/Header";
 import Services from "./assets/Arrays/Homefeaturearray";
 import Carousel from "./Modules/Carousel/Carousel";
@@ -14,25 +14,53 @@ import { GalleryData } from "./assets/Arrays/Gallery/Gallerydata";
 import { Bannercomponent } from "./Components/Banner/Bannercomponent";
 import logo from "./assets/Images/home/logo.png";
 import { Helmet } from "react-helmet-async";
+import imagepopup from './assets/Images/popup/meditationpopup.jpeg'
+import { Popup } from "./Components/Modal/Customodal";
 
 function App() {
+
+  const [isPopupVisible, setIsPopupVisible] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsPopupVisible(true);
+    }, 3000);
+
+    return () => clearTimeout(timer); // Cleanup timer on unmount
+  }, []);
+
+  const handleClosePopup = () => {
+    setIsPopupVisible(false);
+  };
+
   return (
     <>
-     <Helmet>
+      <Helmet>
         <title>Home | Sanjha Ghar</title>
         <meta
           name="home"
           content="Sanjha ghar, authentic food, modern stays and meditation"
         />
       </Helmet>
+    
       <div class="w-full h-screen absolute flex justify-center items-center">
         <div
           class="w-[300px] h-[300px] bg-center bg-no-repeat bg-contain flex justify-center items-center animate-logo-animation"
           style={{ backgroundImage: `url(${logo})` }}
         ></div>
       </div>
-
       <div className=" bg-contain bg-no-repeat bg-center mt-[110px] ">
+
+      {isPopupVisible && (
+        <Popup onClose={handleClosePopup}>
+          <img
+            src={imagepopup}
+            alt="Popup"
+            className="rounded-lg"
+          />
+        </Popup>
+      )}
+
         <NavigationBar />
         <section className="bg-[#e6e8dd] mx-10 my-10 h-[110vh] w-auto rounded-[40px] max-sm:mx-5 max-sm:my-3 max-sm:h-[100vh] max-[850px]:h-[100%]">
           <div
