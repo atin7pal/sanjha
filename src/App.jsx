@@ -56,7 +56,7 @@ function App() {
           <img
             src={imagepopup}
             alt="Popup"
-            className="rounded-lg"
+            className="rounded-lg w-full h-full"
           />
         </Popup>
       )}

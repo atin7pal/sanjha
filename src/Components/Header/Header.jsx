@@ -169,7 +169,7 @@ function NavList() {
       </Typography>
       <Typography
         as="a"
-        href="#"
+        href="/meditation"
         variant="small"
         color="blue-gray"
         className="font-medium"
